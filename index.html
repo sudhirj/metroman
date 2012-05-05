@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<head>
+    <script type="text/javascript" src="zepto.js"></script>
+    <script type="text/javascript" src="metroman.js"></script>
+    <style type="text/css">
+        body {
+            padding: 1em;
+        }
+
+        #container, .type1, .type2, .type3, .type4, .type5 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .type1 {
+            background: red;
+        }
+        .type2 {
+            background: blue;
+        }
+        .type3 {
+            background: green;
+        }
+        .type4 {
+            background: yellow;
+        }
+        .type5 {
+            background: purple;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var b1 = $('<div>').addClass('type1');
+        var b2 = $('<div>').addClass('type2');
+        var b3 = $('<div>').addClass('type3');
+        var b4 = $('<div>').addClass('type4');
+        var b5 = $('<div>').addClass('type5');
+        var config1 = {
+            grid: {
+                rows: 4,        
+                columns: 4      
+            },                  
+            elements: [         
+                {
+                    view: b1,
+                    height: 2,
+                    width: 2,
+                    position: {
+                        x: 2,
+                        y: 0
+                    }
+                },
+                {
+                    view: b2,
+                    height: 2, 
+                    width: 1,
+                    position: {
+                        x: 3, 
+                        y: 2
+                    }
+                },
+                {
+                    view: b3,
+                    height: 2, 
+                    width: 2,
+                    position: {
+                        x: 1, 
+                        y: 2
+                    }
+                },
+                {
+                    view: b4,
+                    height: 2, 
+                    width: 1,
+                    position: {
+                        x: 1, 
+                        y: 0
+                    }
+                },
+                {
+                    view: b5,
+                    height: 4, 
+                    width: 1,
+                    position: {
+                        x: 0, 
+                        y: 0
+                    }
+                }
+            ]
+        };
+        var config2 = {
+            grid: {
+                rows: 4,
+                columns: 4
+            },
+            elements: [
+                {
+                    view: b1,
+                    height: 1,
+                    width: 2,
+                    position: {
+                        x: 0,
+                        y: 0
+                    }
+                },
+                {
+                    view: b3,
+                    height: 1, 
+                    width: 2,
+                    position: {
+                        x: 0, 
+                        y: 3
+                    }
+                },
+                {
+                    view: b2,
+                    height: 2, 
+                    width: 2,
+                    position: {
+                        x: 0, 
+                        y: 1
+                    }
+                },
+                {
+                    view: b4,
+                    height: 3, 
+                    width: 2,
+                    position: {
+                        x: 2, 
+                        y: 0
+                    }
+                },
+                {
+                    view: b5,
+                    height: 1, 
+                    width: 2,
+                    position: {
+                        x: 2, 
+                        y: 3
+                    }
+                }
+            ]
+        };
+        var config3 = {
+            grid: {
+                rows: 4,
+                columns: 4
+            },
+            elements: [
+                {
+                    view: b1,
+                    height: 3,
+                    width: 1,
+                    position: {
+                        x: 0,
+                        y: 1
+                    }
+                },
+                {
+                    view: b2,
+                    height: 2, 
+                    width: 3,
+                    position: {
+                        x: 1, 
+                        y: 0
+                    }
+                },
+                {
+                    view: b3,
+                    height: 2, 
+                    width: 1,
+                    position: {
+                        x: 1, 
+                        y: 2
+                    }
+                },
+                {
+                    view: b5,
+                    height: 2, 
+                    width: 2,
+                    position: {
+                        x: 2, 
+                        y: 2
+                    }
+                },
+                {
+                    view: b4,
+                    height: 1, 
+                    width: 1,
+                    position: {
+                        x: 0, 
+                        y: 0
+                    }
+                }
+            ]
+        };
+        var config4 = {
+            grid: {
+                rows: 4,
+                columns: 4
+            },
+            elements: [
+                {
+                    view: b2,
+                    height: 3,
+                    width: 1,
+                    position: {
+                        x: 0,
+                        y: 1
+                    }
+                },
+                {
+                    view: b1,
+                    height: 2, 
+                    width: 3,
+                    position: {
+                        x: 1, 
+                        y: 0
+                    }
+                },
+                {
+                    view: b3,
+                    height: 2, 
+                    width: 1,
+                    position: {
+                        x: 1, 
+                        y: 2
+                    }
+                },
+                {
+                    view: b4,
+                    height: 2, 
+                    width: 2,
+                    position: {
+                        x: 2, 
+                        y: 2
+                    }
+                },
+                {
+                    view: b5,
+                    height: 1, 
+                    width: 1,
+                    position: {
+                        x: 0, 
+                        y: 0
+                    }
+                }
+            ]
+        };
+        var config5 = {
+            grid: {
+                rows: 4,
+                columns: 4
+            },
+            elements: [
+                {
+                    view: b1,
+                    height: 3,
+                    width: 1,
+                    position: {
+                        x: 0,
+                        y: 1
+                    }
+                },
+                {
+                    view: b4,
+                    height: 2, 
+                    width: 3,
+                    position: {
+                        x: 1, 
+                        y: 0
+                    }
+                },
+                {
+                    view: b3,
+                    height: 2, 
+                    width: 1,
+                    position: {
+                        x: 1, 
+                        y: 2
+                    }
+                },
+                {
+                    view: b2,
+                    height: 2, 
+                    width: 2,
+                    position: {
+                        x: 2, 
+                        y: 2
+                    }
+                },
+                {
+                    view: b5,
+                    height: 1, 
+                    width: 1,
+                    position: {
+                        x: 0, 
+                        y: 0
+                    }
+                }
+            ]
+        };
+        $(function(){
+            metro = new MetroMan($('#container'));
+            b1.click(function(){metro.load(config1);});
+            b2.click(function(){metro.load(config2);});
+            b3.click(function(){metro.load(config3);});
+            b4.click(function(){metro.load(config4);});
+            b5.click(function(){metro.load(config5);});
+            
+            metro.load(config1);
+        });
+    </script>
+</head>
+<body>
+    <div id="container"></div>
+</body>

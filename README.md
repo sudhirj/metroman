@@ -32,3 +32,5 @@ Here's a typical Metro configuration:
             }
         ]
     }
+
+The `userInfoView` and `chatWindowView` objects here can be anything that MetroMan can insert into a DOM node. Internally, there's a statement along the lines of `$(cell).append(userInfoView)` that does the actual insertion. 
