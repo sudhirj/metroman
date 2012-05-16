@@ -1,0 +1,17 @@
+{
+  "author": "Sudhir Jonathan <contact.me@sudhirjonathan.com> (http://www.sudhirjonathan.com)",
+  "name": "metroman",
+  "description": "A Metro-style layout manager for moderen browsers",
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sudhirj/metroman.git"
+  },
+  "main": "./metroman",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
